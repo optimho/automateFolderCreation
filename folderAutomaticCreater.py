@@ -5,7 +5,8 @@ def create_folders(folders):
     path=askdirectory()
     for folder in folders:
         try:
-            os.makedirs(folder)
+            targetpath = fr'{path}/{folder}'
+            os.makedirs(targetpath)
             print(f"folder '{folder}' createated successfully")
         except FileExistsError:
             print(f"Folder '{folder}' already exsists")
